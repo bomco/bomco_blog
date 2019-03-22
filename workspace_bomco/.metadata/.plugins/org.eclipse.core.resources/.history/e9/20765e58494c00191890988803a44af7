@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bomco - Blog</title>
+<style type="text/css">
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+.container {
+	margin: 0 auto;
+}
+
+body {
+	background: #f7fcff;
+}
+
+.container {
+	width: 260px;
+}
+
+.app-icon {
+	position: absolute;
+	z-index: 1;
+	top: 150px;
+	width: 260px;
+	height: 260px;
+	background: -webkit-gradient(-20deg, #eea59c 0%, #ffdde1 100%);
+	background: -moz-linear-gradient(-20deg, #eea59c 0%, #ffdde1 100%);
+	background: linear-gradient(-20deg, #eea59c 0%, #ffdde1 100%);
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	-webkit-box-shadow: 0 20px 40px rgba(25,65,109,0.28);
+	-moz-box-shadow: 0 20px 40px rgba(25,65,109,0.28);
+	box-shadow: 0 20px 40px rgba(25,65,109,0.28);
+}
+
+.petal {
+	position: absolute;
+	top: 23px;
+	left: 65px;
+	height: 95px;
+	border: 28px solid #fff;
+	border-top: 30px solid transparent;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	transform: rotate(330deg);
+}
+
+.petal:before {
+	position: absolute;
+	content: '';
+	top: 38px;
+	left: -6px;
+	width: 12px;
+	height: 15px;
+	background: -webkit-gradient(-20deg, #eea59c 0%, #ffdde1 100%);
+	background: -moz-linear-gradient(-20deg, #eea59c 0%, #ffdde1 100%);
+	background: linear-gradient(-20deg, #eea59c 0%, #ffdde1 100%);
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+}
+
+.petal.top-left {
+	top: 103px;
+	left: 44px;
+	transform: rotate(240deg);
+}
+
+.petal.top-right {
+	top: 27px;
+	left: 140px;
+	transform: rotate(40deg);
+}
+
+.petal.bottom-left {
+	top: 146px;
+	left: 100px;
+	transform: rotate(188deg);
+}
+
+.petal.bottom-right {
+	top: 99px;
+	left: 163px;
+	transform: rotate(110deg);
+}
+</style>
+</head>
+<body>
+	<div class="container">
+	<div class="app-icon">
+		<div class="petal"></div>
+		<div class="petal top-left"></div>
+		<div class="petal top-right"></div>
+		<div class="petal bottom-left"></div>
+		<div class="petal bottom-right"></div>
+	</div>
+</div>
+</body>
+</html>

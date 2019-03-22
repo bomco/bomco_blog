@@ -1,0 +1,7 @@
+server.port=8080
+
+#Data Source - mariaDB
+spring.datasource.driverClassName=org.mariadb.jdbc.Driver
+spring.datasource.url=jdbc:mariadb://localhost
+spring.datasource.username=three
+spring.datasource.password=knock3333

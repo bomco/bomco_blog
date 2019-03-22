@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bomco - Blog</title>
+</head>
+<body>
+<div class="container">
+	<div class="app-icon">
+		<div class="petal"></div>
+		<div class="petal top-left"></div>
+		<div class="petal top-right"></div>
+		<div class="petal bottom-left"></div>
+		<div class="petal bottom-right"></div>
+	</div>
+</div>
+</body>
+</html>
