@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bomco - Main</title>
+<style type="text/css">
+$hue: 320;
+.peddle-center{
+  stop-color:hsl($hue,100%,95%)
+}
+.peddle-outside{
+  stop-color:hsl($hue,100%,85%)
+}
+
+svg{
+  width: 100vw; 
+  height: 100vh;
+}
+
+circle{
+  transform: scale(.5);
+}
+
+.peddle {
+  transform: rotateY(0deg) rotateZ(0deg) scale(1);
+  animation: bloom 5s ease-in-out infinite;
+}
+.blossom{
+  animation: blossom 5s ease-in-out infinite 
+}
+
+
+@for $i from 1 through 20{
+  $dalay : random(500) * -0.6s;
+  $duration: random(3) * 4s;
+  .blossom:nth-child(#{$i}){
+    animation-delay: $dalay;
+    animation-duration: $duration;
+    .peddle{
+      animation-delay: $dalay;
+      animation-duration: $duration;
+    }
+  }
+}
+
+@keyframes blossom{
+  0%{
+    transform: translate(-100px,-100px)   
+  }
+  100%{
+    transform: translate(100px,100px) rotate(20deg)  
+  }
+}
+
+@keyframes bloom{
+  0%{
+     transform: rotateY(90deg) rotateZ(72deg) scale(0);
+     
+  }
+  50%{
+     transform: rotateY(0deg) rotateZ(0deg) scale(1);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: translate(40px, 40px) rotate3d(1,0.5,1,90deg)
+  }
+  
+}
+
+/*Page Setup*/
+
+@import url('https://fonts.googleapis.com/css?family=Unica+One');
+svg {
+  width: 100vw;
+  height: 80vh;
+}
+
+
+body {
+  background: hsl(200,60%,20%);
+  display: flex; 
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title {
+  height: 10vh;
+  line-height: 10vh;
+  font-size: 8vh;
+  padding: 2.5vh;
+  margin: 0;
+  color: hsl(200, 20%, 90%);
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  font-family: 'Unica One', cursive;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+
+		<div th:text="Bomcoding"></div>
+		<div>
+		<a href="#" type="button" th:text="blog"></a>
+		</div>
+		<a href="#" th:text="protfolio"></a>
+	</div>
+	<script type="text/javascript">
+	- var n=12
+	- var center_x = 500
+	- var center_y = 350
+	- var angle = 0.5 
+	- var radius = 350
+
+	svg(viewBox="0 0 1000 1000")
+	  defs
+	    radialGradient(id="blossom-gradient" cx="0.25" cy="-44" r="61.5081" gradientUnits="userSpaceOnUse")
+	          stop(offset="0" class="peddle-center")
+	          stop(offset="1" class="peddle-outside")
+	    symbol(id="blossom" viewBox="-32.2 -55.9 64.5 111.7")
+	      path(fill="url(#blossom-gradient)" class="peddle-gradient" d="M32.2,0c0-23.9-13-44.7-32.2-55.9C-19.3-44.7-32.2-23.9-32.2,0s13,44.7,32.2,55.9C19.3,44.7,32.2,23.9,32.2,0z")
+	  while n--
+	    - r = 100 - 5 * n
+	    - var cx = (center_x + Math.cos(angle*n) * (radius - 20 * n)).toFixed(1)
+	    - var cy = (center_y + Math.sin(angle*n) * (radius - 20 * n)).toFixed(1)
+	    - var orgin = cx + "px " + cy + "px;"
+	    //circle(cx=cx  cy=cy r=r style="transform-origin:"+ cx + "px " + cy + "px;")
+	    - var p = 5
+	    g(class="blossom")
+	      while p--
+	        g(transform="rotate("+72*p+","+cx+","+cy+")" class="peddle-group")
+	          use(xlink:href="#blossom" 
+	            class="peddle"
+	            x=cx-r/2 
+	            y=cy 
+	            width=r 
+	            height=r
+	            style="transform-origin:" + orgin)
+	.title bloom
+	</script>
+</body>
+</html>

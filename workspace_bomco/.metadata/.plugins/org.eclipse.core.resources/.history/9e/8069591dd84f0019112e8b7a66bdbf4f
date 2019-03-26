@@ -15,6 +15,10 @@ body,
 	margin:auto;
 }
 
+body {
+	background: #f7fcff;
+}
+
 .container {
 	width: 260px;
 }
@@ -91,7 +95,13 @@ body,
 </head>
 <body>
 	<div class="container">
-
+		<div class="app-icon">
+			<div class="petal"></div>
+			<div class="petal top-left"></div>
+			<div class="petal top-right"></div>
+			<div class="petal bottom-left"></div>
+			<div class="petal bottom-right"></div>
+		</div>
 		<div th:text="Bomcoding"></div>
 		<div>
 		<a href="#" type="button" th:text="blog"></a>
