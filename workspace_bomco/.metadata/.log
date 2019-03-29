@@ -1983,3 +1983,15 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-03-26 23:48:04.554
 !MESSAGE executing callback sts4.classpath.lnWjRIpE SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-03-27 01:12:14.158
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.lnWjRIpE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-03-27 01:12:14.160
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.lnWjRIpE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-03-27 01:12:14.161
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-03-27 01:12:14.163
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.lnWjRIpE => OK
